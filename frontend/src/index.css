@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #95B2B8;
+    --color-dark: #172326;
+    --color-charcoal: #202A2D;
+    --color-bg: #F4F7F7;
+    --color-card: #FFFFFF;
+    --color-border: #E5EBEC;
+    --color-muted: #596568;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-dark);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom architectural grid background */
+.bg-tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(229, 235, 236, 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(229, 235, 236, 0.6) 1px, transparent 1px);
+}
+
+.bg-tech-grid-dark {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(50, 65, 69, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(50, 65, 69, 0.35) 1px, transparent 1px);
+}
+
+/* Vertical orientation utility */
+.writing-vertical {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F7F7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #95B2B8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #82A3A9;
+}
